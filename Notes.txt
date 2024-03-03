@@ -91,4 +91,27 @@ jre;
 	it is used to prouide developing tool used for java apllication it contains set of files to execute the also jre libraries we can execute a single program in java itis also physically exits.
 jvm;
 ----
-	
+Java virtuval machine	it is a  program to execut the .class file in java main stops it is used to execute the main methord from the class load the class 
+execute the class deploy the class whiich all are handled by jvm and also it provide runtime environment.
+
+classification of java;
+----------------------
+	java is case sensitive programming language here duplicate naming with same case are not allowed in java. Java is also following the structure like;
+1)create project ;
+2)create package inside the project;
+3)inside the package only we can create an class in java 
+4)execute the class it can only run the main method from the give class.
+
+//identifier are naming in java 
+project name.
+package name.
+class name.
+variable name.
+method name.
+object name.
+
+allowed charactres to create the naming in java[0-9][a-z][A-Z][$_] naming should with numerical values(not allowed);
+//return type methods 
+primitve or non premitive methods;
+
+ 
