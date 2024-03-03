@@ -124,5 +124,15 @@ object name.
 allowed charactres to create the naming in java[0-9][a-z][A-Z][$_] naming should with numerical values(not allowed);
 //return type methods 
 primitve or non premitive methods;
-
+class demo {
+	void method(){	
+	}
+	int methos(){
+		return 3234;
+	}
+public static void main(String[] agrs){
+	int a;
+	a=100;
+}
+}
  
