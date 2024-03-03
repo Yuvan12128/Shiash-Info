@@ -87,6 +87,9 @@ robust;
 ------
 	Rou=bust meaning is strog. using the garbage collaction we are having stroge memory managerr it is dynaically 
 rome the used variable, method, object from stroage before execution.
+=========================================================================================================================
+29.02.2024 |
+___________
 jdk;
 ----
 	java development kit;
@@ -136,3 +139,89 @@ public static void main(String[] agrs){
 }
 }
  
+==========================================================================================================================
+02.03.2024 |
+___________
+
+Key Words in java;
+-----------------
+	these also called as reserved  word in java 
+we can only use this keyword if you try to perform any modification over the keyword compliler caonsider as identifier
+
+Access Modifier Keywords;
+------------------------
+	public, private, protected.
+
+primitve stat type keyword;
+--------------------------
+	byte, short, int, long, float, double, char, boolean;
+
+Selection statment keyword;
+--------------------------
+	if, else , if else, switch, case, default.
+looping statement keywords;
+--------------------------
+	while, for, do;
+break and continue keywords;
+--------------------------
+	break, continue;
+class level keyword;
+-------------------
+	class, new, static, final, abstract, interface,extrends, implements.
+method level keyword;
+--------------------
+	void, return, synchronized.
+exeception handling keyword;
+---------------------------
+	try, catch, finally, throws, throws.
+Find valid and invalid keywords;
+-------------------------------
+String     ==>invalid;     
+int        ==>valid;
+integer    ==>invalid;
+class      ==>invalid;
+non-static ==>invalid;
+local      ==>invalid;
+file       ==>invalid;
+abstract   ==>valid;
+instant    ==>valid;
+finialize  ==>invalid;
+finally    ==>valid;
+final      ==>valid;
+
+data types in java;
+------------------
+	data type it used to store a value invariable.
+there are two data type in java;
+
+				data type
+				     |
+			___________________________________________
+			|							|
+		primitive datatype      		non-primitive datatype
+boolean	char		numeric data
+|		|			|
+boolean  	char			floating(float,double);
+					|
+					Integer(byte,short,int,long);
+
+primitiv data type;
+-------------------
+	the size is fixed in primitive data type.
+boolean data type;
+-----------------
+	the values we can store is either true or false;
+Syntax;
+------
+boolean condition=true;
+boolean condition=false;
+
+class a{
+public static void main(String[]args){
+boolean con=True; //----c.e;
+System.out.println(con);
+}
+}
+o.p;
+-----
+c.e
