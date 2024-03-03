@@ -1,0 +1,94 @@
+27.02.2024 |
+___________
+
+Programming language;
+--------------------
+
+	In oder to commumicate with he computer we are having set of programing language based on hte instruction written on programs using the programing language we can perform various task.
+
+Types if programming languvage;
+------------------------------
+	
+	low-leval programming lang;
+	high level language;
+
+low level language;
+------------------
+
+	it is machine dependent lang(os) to run these program we dont need complier or interpreter.
+
+high-level programming language;
+-------------------------------
+
+	it is used to develop the softwer and website in oder to run these programming lang we need compiler or interprinter tbe advantage of using the high level programming lang is it easy to maintain, read and write
+
+Type of Application;
+-------------------
+	Desktop Appication (Stand Alone Application)
+	Web Application( Enterprise Application)
+ 	Mobile Application.
+
+Java;
+-----
+==>java os high leval programming language 
+==>father of java is james gosling.
+==>java is initially developed user sum micro System.
+==>project is stated on 1991. the number of people worked in this project under mike sheridan, oactrick naughton, java name of the team called as green tram.
+==>the first version of java is released on 1995 initial purpose of development of programming the tele communication eg,setup name of the first version of java re aplha and beta.
+
+Features of java :
+-----------------
+Simple 
+oop
+secured
+robust platfrom independent'protable
+architectural neutral.
+
+Simple
+------
+	java is derived from c++ programming lang so syntax are easy to in java we are not using complicate features like pointers muliple inheritance are not supported call level in interfacd;
+
+oop;
+----
+	jsvs is object oriented programming lang in java everythings object. we can organize the propertices of the classes the objects. using wethodology of oop it simplifies software development
+
+important oop features are;
+--------------------------
+	Abstraction
+	Encapsulation 
+	polymorphism.
+	inheritance
+	class and object
+
+plantfrom intependent;
+--------------------
+	we can run java in many platforms main methordology to devolop java is write ince run anywhere 
+	we can achive the dependency by having the byte code representation and also java.
+
+Secured;
+--------
+	here we not using  ponters so adderss con't be founded.
+	inside the java we are the multiple lauers.
+
+class loader;
+------------
+	it is the part is h=jre which is load the class into jre dynamically.
+
+byte code verifier;
+-------------------
+	it checks the code that can be accessed by the object
+robust;
+------
+	Rou=bust meaning is strog. using the garbage collaction we are having stroge memory managerr it is dynaically rome the used variable, method, object from stroage before execution.
+jdk;
+----
+	java development kit;
+		using the jdk we can get software development enviroment which is used to develop java application.
+		it is physically exists.
+		in side the jdk we are having the jre java run time enviroment and jvm (java virtual memory) and also development tool like class loader and compiler jar file external resouces.
+jre;
+---
+	it is used to prouide developing tool used for java apllication it contains set of files to execute the also jre libraries we can execute a single program in java itis also physically exits.
+jvm;
+----
+	
