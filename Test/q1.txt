@@ -1,0 +1,106 @@
+Given different between provedural vs Object oriented approch.
+
+Explain main method in java. Given Explaintion for each keyword;
+ans:
+---
+	public static void main(String [] args)
+
+public : is a access modifier. that method is access from any class;
+static : is a constances memory;
+void :the mothod does not return values;
+main :the name of the method.  Entry point for the program;
+String[] args: parameter representing array of string used for passing commandline arguments to the program.
+
+
+store phone number;
+------------------
+
+public static void main(String[] args){
+int n =7358338105L;
+System.out.println(n);
+
+}
+out:
+---
+7358338105
+
+=============================================================================
+
+specify memory size;
+-------------------
+
+byte =8 bit;
+short =16 bit;
+int =32 bit;
+long =64 bit;
+float=32 bit;
+double= 64 bit;
+char =16 bit;
+boolean= only true or false only;
+String=represents sequence of characters;
+===============================================================================
+valid / invalid;
+---------------
+A)
+1.a=10,int b=10; // invalid;
+2.int a=10,int b=10; //valid;
+3.Int a=10, b=20; // invalid;
+4.Int a=10;int b=20; // invalid;
+5.Int a=b=10; // invalid;
+B)
+1.int 1total=100; // invalid;
+2.int total=100;  //valid;
+3.int total count=100;  //invalid;
+4.int total_count=100; // valid;
+5.int total$count=100; //valid;
+6.int $_totalcount=100;  //valid;
+7.int _$totalcount=100;  //valid;
+8.int Totalcount=100;  //valid;
+9.int package=100;  //valid;
+10.int ~total=100; // invalid;
+C)
+1.char a='$'; // valid ;
+2.char a='<'; //valid;
+3.char a='1';  //valid;
+4.char a='08'; //invalid;
+5.char a='z'; //valid;
+==============================================================================
+given out put;
+-------------
+1)
+public class main{
+public static void main(){
+
+int a =10;
+int b=20;
+
+System.out.println("Sum :"+a+b);
+}
+
+}
+out;
+---
+Sum :1020;
+-----------------------------------------------------
+2)
+
+int a;
+int b=0;
+static int c=0;
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);
+
+out;
+----
+0
+0
+0
+-----------------------------------------------------
+3)
+byte a=10;
+(a+b byte b=10;
+byte c= a+b;
+System.out.println c);
+
+-----------------------------------------------------
