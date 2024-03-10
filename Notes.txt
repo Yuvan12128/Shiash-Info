@@ -230,3 +230,133 @@ c.e
 --------
 Test 1 github link:https://github.com/Yuvan12128/Shiash-Info/blob/d2e1f03f7f1d614731fa21bfd106e025722fd4a7/Test/q1.txt
 =============================================================================================
+9.3.24 |
+--------
+
+String ;
+
+Litrals and Object;
+------------------
+
+Litrals;
+--------
+eg: String s="good evening";
+->SCP (String Constant pool);
+->SCP -> s-> good Evening
+
+Object;
+-------
+eg: String s1=new String ("Good Evening");->Heap Memory
+heap -> s1-> Good Eveing ;
+
+String s1="Friday class";
+String s2="friday class";
+scp->s1,s2->friday class-636647
+String s3=new string ("friday class");
+String s4 =new String("Friday class");
+
+Declaration and Initialization of string ;
+-declaration 
+String a;
+
+-Initiatation;
+a="10";
+
++- Opdator and cancat ()- method: ->,concat()-it willjoin both string value.
+->int inc=1+2;
+String str="hai"+"hello";
+System.out.println(str);//hai hello
+System.out.println(inu);//3
+System.out.println(string+inc);//hai hello3
+System.out.println(str+1+2);//haihello12
+->concat();
+String s="hello"; 
+String s1="hello";
+System.out.println(s.concat(s1));//hellohello
+System.out.println(s.caoncat("hai"));//hellohai;
+system.out.pinrtln(s.cancat(" ").cancat("hai"));//hellohai
++oprator - it is h=just combine both string without create new object (temprary).caoncat()-It is combine both 
+String but it create a new object.
+char ch='a';
+String ss=new String();
+ss.conat("before string");
+System.out.println("value of ss:"+ss+"end");
+ss=ss.caoncat("after string");
+System.out.println("value of ss:"+ss+"end");
+//ss=after string 
+ss="hello";
+// ss= hello (un referneced object value)-->(?);
+after string (garbage collector);
+// immitable 
+String buffer sb=new SringBuffer();
+sb.append("hello");
+System.out.println("value of sb:"+sb);
+//== Opator(primitive data type);
+System.out.println(11==44);
+System.out.println(10.0==10);
+System.out.println(false==false);
+System.out.println(true==false);
+System.out.println(97=='a');
+
+String lit="good";
+string obj=new String ("good ");
+String lit2="good";
+String obj2=new string("good");
+String lit3=lit2;
+String obj3=obj;
+String obj4=new String(obj);
+//==Operator in on primitive data type
+//when we are using the == oprator in non primitve data type address location will be compared;
+//in the case each object should cantain seperate memory allocation when it is an string object;
+// tit,lit1,lit3-->good(scp);
+//obj,obj3-->good(heap);
+//obj2-->good(heap);
+System.out.println(lit==obj);
+System.out.println(lit==lit2);
+System.out.println(lit==lit3);
+System.out.println(obj==obj2);
+System.out.println(obj==obj3);
+out;
+---
+hello everyone
+value of ss:end
+value of ss: after string end
+value of modified ss object is: hello
+value of sb:hello
+false
+true 
+true
+false
+false
+true
+false
+true 
+false
+true
+------------------------------------------------------
+
+byte b=10;
+short s=10;
+int a=10;
+long l=10l;
+String samp =new String ("ff");
+samp=sam+100;
+System.out.println(samp);
+int dd=10;
+samp=dd+samp;
+System.out.println(samp);
+//l=dd+a+s+l+samp;
+System.out.println("after :"+samp);
+samp="aa"+dd+a+s+l+samp;
+System.out.println("end :"+samp);
+out;
+---
+ff100
+10ff100
+after :4010ff100
+end :aa101010104010ff100
+
+
+
+
+

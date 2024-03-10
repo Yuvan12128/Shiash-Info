@@ -103,4 +103,57 @@ byte a=10;
 byte c= a+b;
 System.out.println c);
 
+out;
+---
+c.e
+
 -----------------------------------------------------
+4)
+public static void main(String args[]){
+int a =063;
+System.out.println(a);
+}
+out;
+---
+063
+------------------------------------------------------
+5)public  staitc void main(String args[]){
+int i='i';
+System.out.println(i);
+}
+
+out;
+---
+c.e
+-------------------------------------------------------
+6)
+public static void main(String args[]){
+int $=10;
+int $num1=20;
+int num2$=20;
+
+System.out.println($);
+System.out.println($num1+num2$);
+}
+out;
+----
+10
+40
+---------------------------------------------------------
+7)
+public static void main(String args[]){
+
+System.out.println('a'+'b');
+}
+out;
+---
+195
+---------------------------------------------------------
+8)
+public static void main(String...args){
+
+System.out.println("check for correctness");
+}
+out;
+---
+check for correctness
