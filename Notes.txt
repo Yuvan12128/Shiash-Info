@@ -355,8 +355,133 @@ ff100
 10ff100
 after :4010ff100
 end :aa101010104010ff100
+========================================================
+12.03.2024|
+----------
+
+String s="100";
+//find the lenth of string;
+System.out.println(s.lenght());
+//to add two string 
+s=s.cancat("percentage");
+System.out.print(s);
+System.out.println("lenght  :"+s.length());
+s="    !"+s+"!    ";
+System.out.println(s);
+// remove the spaces of the string beginning and end
+s=s.trim();
+System.out.println(s);
+// to retrive the specific index of character in string 
+// index position are always starts with 0;
+System.out.println("3rd index position character of string s object is :"+s.charAt(3));
+// to retive the index position of the string character
+System.out.println(s.intexOf("cent"));
+System.out.println(s.intexOf('p'));
+System.out.println(s.intexOf("cemt"));
+
+// replase the character of string 
+s=s.replase('e','5');
+System.out.println("replace the character of string :"+s);
+
+//convert the character in to upper case;
+s=s.toUppercase();
+System.out.println("the character into upper case"+s);
+
+// Convert the character into lower case;
+   s=s.toLowerCase();
+System.out.println("convert to the lower case"+s);
+// last index position of the character 
+System.out.println("last index position change of the $ character :"+s.lastIndexOf('$'));
+// to retrive the froup of character based on the start index and end index position -1;
+System.out.println("group of tje character based on the start index position -1 substring :+s.subString());
+System.out.println(s.subString(11));
+//to store the group of slipt string in array we canuse split();
+String [] obj=s.split("$");
+
+output;
+-------
+3
+100 percentage
+lenght   :14
+    !100 percentage!
+!100 percentage!
+3rd index position charcater of String s object is :0
+8
+5
+-1
+replase the character of string   :!100 p5rc5ntag5!
+the character into uppercase   :!100 P5RC5NTAG5!
+convert the lower case   :!100 p5rc5ntag5!
+last index position of the $ character   :-1
+group of character based on the start index position -1 subString :0 p
+tag5!
+[100p,rc,ntag,!]
+[!,1,0,0, ,p,5,r,c,5,n,t,a,g,5,!]
+true 
+false
+true
+false 
+true 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exception Handling:-
+------------------
+    Exception : some un wanted and un exception lines of statement that narmally disturb the flow of execution is called exception 
+
+eg:
+--
+     comple will occur due to system lack of resource 
+
+Exception are the classes which is present in java.lang.*
+
+eg:
+--
+    class demo{
+public static void main(String[] args){
+int a=10;
+System.out.println(a/10);
+System.out.println(1/0);-------e.c;
+}
+
+}
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
+Termination : Abnormal Termination:-
+eg:2;
+-----
+class demo{
+public static void main(String[]args){
+int a=10;
+System.out.println(a/10);
+System.out.println("hello");
+}
+}
+out:
+---
+1
+hello
+termination:normal termination 
+---------------------------------------------------------------------------------
+eg:3:-
+-----
 
+class demo{
+public static void main(String[]args){
+System.out.println("hello");
+String a="sss";
+System.out.println(a.indexOf(99));
+
+}
+
+}
+
+output;
+------
+String Index out of Bound Exception(r.e)
+Termination :Abnarmal Termination
+===================================================================================================================================================
+14.03.2024 |
+-----------
 
