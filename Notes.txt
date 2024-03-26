@@ -484,4 +484,179 @@ Termination :Abnarmal Termination
 ===================================================================================================================================================
 14.03.2024 |
 -----------
+===================================================================================================================================================
+26.03.2014;
+-----------
 
+task;
+1.
+while (true)
+System.out.print("hello");
+o/p;
+---
+hello
+hello
+---------------------------------------
+
+2.
+while(false)
+System.out.print("hello");
+System.out.print("false");
+o/p;
+--
+e.p
+-----------------------------------------
+
+3.
+int i=10;
+final int j=10;
+while(i<=j){
+i=23;
+System.out.print("while loop");
+
+}
+System.out.print("hello");
+o/p
+---
+while loop 
+hello
+-----------------------------------------
+
+4.
+final int i=10;
+final j=10;
+whike(i<j)
+{
+System.out.print("while loop");
+}
+System.out.println("hello");------
+o/p;
+----c.eunreachablecode;
+-------------------------------------------
+5.
+final int i=10;
+final int j=10;
+while(i!=j){
+Sysout("while loop");----->c.e
+}
+Sysout("hello");
+
+o/p;
+----
+c.e
+=================================================================
+Array;
+if u want to store the collection of values from similar data types from the length we can use array is an class present in java.lang.package
+
+chreacteristic of array:
+size is fixed
+we cant able to increase or decrease the size of the array only homogeneous data type value are allowed
+it is always initilized with the defult value for 
+Single dimentional array:
+Syntax:
+-------
+int [] obj =new int[4(int size)];
+eg:
+---
+class A{
+public static void main(String [] args){
+//declaration
+String [] a1;
+//inilitizetion the array
+a1=new String[3];
+//value of index of array object
+3-total size of the array -3
+total index postion -[0] to [2]
+negative values are not allowed in index postion it always start with zero
+same  negative values are not allowed in index position 
+//values of index position of array object
+a1[0]=22;
+//print the array specific index positon value  
+System.out.print(a1[2]);
+System.out.print(a1[0]);
+System.out.print(a1[3]);
+System.out.print(a1);----------->class name with hashcode
+//size of array 
+System.out.print(a1.length);
+System.out.print(a1.getClass().getName());
+//print an class object
+}
+}
+o/p;
+----
+null
+22
+c.e----->Array Index out of Bound Exception
+[String 
+[String@34243
+
+task:
+----
+class Sample {
+public static void main(String []args){
+Sample s=new Sample();
+Sytem.out.print(s);
+
+int[] arr=new int[233];
+System.out.print(arr);
+
+int val=arr.length-200;
+Sytem.out.print(val);
+
+byte[]b=new byte[211];
+Sytem.out.print(b);
+b[121]=100;
+System.out.print(s.getClass().getName());
+System.out.print(arr.getClass().getName());
+System.out.print(b.getClass().getName());
+System.out.print(val.getClass().getName());
+}
+}
+o/p;
+demo.demotest@73a8dfcc
+[I@1c655221
+33
+[B@58d25a40
+demo.demotest
+[I
+[B
+c.e
+----------------------------------------------------------
+there ae three ways to print array values:
+------------------------------------------
+Array class 
+for each 
+for loop 
+1.Array is a class present java.util
+
+Class A{
+
+pulbic static void main(String []args){
+int [] arr=new int[2];
+System.out.print(Arrray.toString(arr));
+}
+o/p';
+-----
+[0,0]
+
+Class A{
+public static void main(String[]args){
+Sample s=new Sample();
+System.out.print(s);
+int[] arr=new int [5];
+arr[4]=11;
+arr[2]=11;
+arr[3-2]='a';
+for(int i=0;i<=arr.length;i++){
+System.out.print(arr[i]);
+}
+}
+}
+o/p;
+----
+0
+97
+11
+0
+11
+============================================================
