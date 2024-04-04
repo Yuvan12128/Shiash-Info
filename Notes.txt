@@ -627,7 +627,7 @@ there ae three ways to print array values:
 Array class 
 for each 
 for loop 
-1.Array is a class present java.util
+1.Arrays is a class present java.util
 
 Class A{
 
@@ -850,4 +850,127 @@ sysoutln();
 
 
 ======================================================================
+04.04.2024;
+-----------
+type of variables;
+there are three types of varisable in java
+------------------------------------------
+
+instance variable:
+-----------------
+    The variables which are created outside scope of the main method and without static keyword the the variable called as instance variable
+
+restrcion of creating instance variable:
+----------------------------------------
+    Instance vatiable are declaed on the top of the class
+    We can perfrom initialization for the instance variable inside the constructor,instance block method 
+    defalut values are allowed for the instance variable. only way perfrom initilization or call the instanxe variable inside the main method by creating object by creating object of the class for each object a seperate memory allocation has been provied has been provided for the instace variable storage has been represented for instace variable inside the heap memory ;
+we cant able to call the instance variable static area
+sysntax:
+--------
+class sample{
+int a=100;
+int b;
+public static void main(String []args)
+{
+
+
+}
+
+} 
+
+eg:1;
+-----
+class sample{
+int a=100; ------------>c.e
+int b;
+{---------------- => multiple instance block allowed;
+
+
+}
+sample()---->defalut construtor
+{
+a=12;
+b=2;
+}
+public void m1(){
+a=111;
+b=11;
+
+}
+punlic static void m2(){
+a=100;--------->c.e;
+}
+public static void main(String []args)
+{
+sample obj=new sample();
+obj.a=11;
+sysout(obj.a);
+
+sample obj2=new sample();
+sysout(obj.a);
+
+obj.a=obj2.m1();
+sysout(obj.a);
+sysout(obj.a);
+obj2.=obj.b+obj.a;
+
+}
+
+} 
+
+obj ----->a=100,b=0;------> a=44,b=1---> a=12,b=2--->a=11,b=2;
+
+obj2--->a=100;,b=0;--->a=44,b=1-->a=12,b=2;
+o/p;
+---
+11
+12
+122
+111
+113
+11
+
+program:
+---------
+package test;
+
+public class test {
+	int var1;
+	int var2;
+	
+	test(){
+		System.out.println("defalut constructor");
+		m1();
+	}
+	test(int a){
+		System.out.println("parameter constuctor 2");
+	}
+	{
+		System.out.println("instance block");
+	}
+	{
+		System.out.println("instance 2");
+	}
+	public static void m1() {
+		System.out.println("instance method");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		test obj=new test();
+		test obj2=new test(1);
+	}
+
+}
+o/p
+----
+instance block
+instance 2
+defalut constructor
+instance method
+instance block
+instance 2
+parameter constuctor 2
+================================================================================================
+
 
