@@ -1,0 +1,214 @@
+package shiars;
+
+import java.util.Arrays;
+
+public class t2 {
+
+	public static void main(String[] args) {
+		
+	q1();
+	q2();
+	q3();
+	q4();
+	q5();
+	q6();
+	q7();
+	}
+
+	private static void q7() {
+		
+		System.out.println("Single dimentional Array");
+		int[] a= {1,2,3,4,5};
+		for(int i=0;i<a.length;i++) {
+			System.out.println(a[i]);
+		}
+		System.out.println("-----------------");
+		for(int n:a) {
+			System.out.println(n);
+		}
+		System.out.println(Arrays.toString(a));
+		System.out.println("Two Dimentional Array");
+		int [][]a2= {{1,2,3},{4,3,2},{7,8,6}};
+		for(int i=0;i<a2.length;i++) {
+			for(int j=0;j<a2.length;j++) {
+				System.out.print(a2[i][j]+" ");
+			}System.out.println();
+		}
+		System.out.println("=================");
+		for(int[] z:a2) {
+			for(int i1:z) {
+				System.out.print(i1+" ");
+			}System.out.println();
+		}
+		System.out.println(Arrays.deepToString(a2));
+	}
+
+	private static void q6() {
+		
+		String s="hello";
+		String s2="world";
+		
+		System.out.println(s);
+		System.out.println(s2);
+		System.out.println("--------------------------------");
+		s=s+s2;
+		s2=s.substring(0,s.length()-s2.length());
+		s=s.substring(s2.length());
+		
+		System.out.println(s);
+		System.out.println(s2);
+	}
+
+	private static void q5() {
+		
+		int[][]a= {{1,3,2},{4,3,2},{8,9,7}};
+		
+		for(int i=0;i<a.length;i++) {
+			for(int j=0;j<a.length;j++) {
+				System.out.print(a[i][j]+" ");
+				
+			}System.out.println();
+		}
+		System.out.println("-----------------");
+		for(int i=0;i<a.length;i++) {
+			for(int j=0;j<a.length;j++) {
+				System.out.print(a[j][i]+" ");
+				
+			}System.out.println();
+		}
+		
+		
+	}
+
+	private static void q4() {
+		
+		int number= 100;
+		
+		for(int i=1;i<number;i++) {
+			int n=number+1;
+			if(isprimenumber(n)) {
+				System.out.println(n);
+				break;
+			}
+			n=number-1;
+			if(isprimenumber(n)) {
+				System.out.println(n);
+				break;
+			}
+		}
+		
+	}
+
+	private static boolean isprimenumber(int number) {
+		
+		for(int i=2;i<=(number/2);i++) {
+			if(number%i==0) {
+				return false;
+			}
+		}
+		return false;
+		
+	}
+
+	private static void q3() {
+		
+		int[]arr1= {55,3,2,1,3,1,456};
+		
+		for(int i=arr1.length-1;i>=0;i--) {
+			System.out.println(arr1[i]);
+		}
+		
+	}
+
+	private static void q2() {
+	
+		int total=0;
+		int[][] arr1= {{111,6,55},{0,2,3,},{4,2,19}};
+		int[][] arr2= {{12,3,4},{5,1,6,7},{82,9,130}};
+		for(int i=0;i<arr1.length;i++) {
+			for(int j=0;j<arr1.length;j++) {
+				for(int k=0;k<arr2.length;k++) {
+					for(int l=0;l<arr2.length;l++) {
+						if(arr1[i][j]==arr2[k][l]) {
+							System.out.println("common number : "+arr1[i][j]);
+							
+							total=total+arr1[i][j];
+						}	
+					}
+				}
+			}
+		}System.out.println();
+		System.out.println("sum values : "+total);	
+	}
+
+	private static void q1() {
+		
+		String computerMove = null;
+		switch ((int)(3*Math.random())) {
+		case 0:
+			computerMove="rock";
+			break;
+		case 1:
+			computerMove="scissors";
+			break;
+		case 2:
+			computerMove="paper";
+			break;
+			
+		}
+System.out.println("computer moves is "+computerMove);
+		
+	}
+
+}
+output;
+------
+computer moves is scissors
+common number : 6
+common number : 3
+common number : 4
+
+sum values : 13
+456
+1
+3
+1
+2
+3
+55
+1 3 2 
+4 3 2 
+8 9 7 
+-----------------
+1 4 8 
+3 3 9 
+2 2 7 
+hello
+world
+--------------------------------
+world
+hello
+Single dimentional Array
+1
+2
+3
+4
+5
+-----------------
+1
+2
+3
+4
+5
+[1, 2, 3, 4, 5]
+Two Dimentional Array
+1 2 3 
+4 3 2 
+7 8 6 
+=================
+1 2 3 
+4 3 2 
+7 8 6 
+[[1, 2, 3], [4, 3, 2], [7, 8, 6]]
+=====================================================
+

@@ -1270,4 +1270,214 @@ number is odd 5
 
 
 ==================================================================================================================================
+11.4.2024;
+---------
+OOps;
+    the term oops refers as object oriented programming system to structure 
+the main advantage of using the opps feature which is robuest, maintanable, more proiority for code reuseablility 
+there are some pillars of oops java features 
+classes and objects 
+inheritance 
+ploymorphism 
+abstraction 
+
+classes and Object:
+-------------------
+
+    Class:
+    ------
+    Classes are buleprint for the objects which define the structure and behaviour 
+
+    Object:
+    -------
+    it is used to invoke the instance of the class and represent the real time entites 
+
+    Inheritance:
+    ------------
+    inheritance allows the class which shere the properties like methods and attritubes from one class to anther using the keyword of extends we can achive the inheritance 
+
+in java at class level we cant able to multiple inheritance on class level 
+
+in interface level we can achive the multiple inheritnce 
+ there are types of inheritance:
+single inhertitance
+muti level inheritance
+hierarchical inheritance 
+
+Single inheritance:
+-------------------
+    single inheritance allows the class extends only class 
+it is used for code reuseability
+
+EG:
+---
+class Company
+{
+void work(){
+
+Sysout("working for hours to complete the project");
+}
+
+}
+
+class employee extends company{
+void perfromTeask(){
+sysout("task has been updated by the employee");
+}
+
+}
+
+class test{
+public static void main(String[] args){
+
+Employee obj=new Employe();
+company com=new company();
+Companu obb=new Employee();
+sysouta("---------child class object :obj-------------");
+obj.work();
+obj.perfromtask();
+
+
+sysout("------------"parent class object:com);
+com.work();
+sysout(-----------"obb");
+obb.work();
+}
+
+}
+o/p;
+----
+--------child class object :obj
+working for hours to comple the project
+---------"parent class object :com
+working for hours to compled the project 
+object-------obb
+working for hours to complete the project
+
+
+muti leval inhertiance:
+-----------------------
+THE derived class extends an another class and that class extends by another class 
+it allows the class to acces multiple class behaviours in the single class 
+
+eg:
+---
+class Animal{
+int a=13;
+int b;
+void eat(){
+Sysout("animal ids eating ");
+
+}
+void sleep(){
+sysout("animal is sleeping");
+
+}
+
+}
+
+class Dog extends Animal{
+static int a=10;
+int c=313;
+void bark(){
+sysout("dog is barking");
+
+}
+
+
+}
+class gramansheperedDog Extends Dog{
+int a=10;
+void guard(){
+Sysout("gramansheperedDog protect the owner");
+
+}
+
+}
+class test {
+public static void main(String[]args){
+GermansheperdDog obj=new GermansheperdDog();
+obj.eat();
+obj.sleep();
+obj.bark();
+obj.guard();
+syout(obj.a);
+syout(obj.b);
+syout(obj.c);
+syout(Animal.a);
+
+}
+
+}
+
+o/p;
+----
+animal is eating
+animal is sleeping 
+dog is barking 
+GramansheperedDog protecting the owner 
+10
+0
+313
+13
+
+
+Hierarchical Inheritance:
+------------------------
+
+hierarachial inheritance is when the mutiple subclasses inherit from the single superclasses
+it has facilates the common behaviour to be shared among mutiples among mutiple classes
+
+eg:
+---
+
+class Animal{
+Animal(){
+sysout("Animal class constructor");
+}
+void eat(){
+
+sysout("animal is eating ")
+}
+
+}
+class Dog extends animal{
+void berk(){
+
+sysout("dog is barking");
+}
+
+
+}
+class cat extends Animal{
+
+void memow(){
+sysout("cat is memow");
+
+}
+
+}
+class test {
+
+public static void main(String []args){
+Dog obj=new Dog();
+obj.memow();
+obj.eat();
+cat obj2=new Cat();
+
+
+}
+
+}
+o/p;
+----
+Animal class canstructor
+dog is brarking
+animal os eating 
+cat is meowing 
+animal is eating
+cat is meowing 
+=====================================================================
+13.04.2024;
+----------
 

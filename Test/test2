@@ -1,0 +1,170 @@
+package test;
+
+import java.util.Scanner;
+
+public class test2 {
+
+	public static void main(String[] args) {
+		
+		q1();
+		q2();
+		q3();
+		q4();
+		q5();
+		q6();
+		q7();
+		
+
+	}
+
+	private static void q7() {
+		//java program to check if a given integer os odd or even;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter your number :");
+		int number=sc.nextInt();
+		if(number%2==0) {
+			System.out.println("number is even "+number);
+		}else System.out.println("number is odd "+number);
+		System.out.println("------------------------------------");
+	}
+	private static void q6() {
+		// java program to find sum of Fibonacci series number of first 4 even index
+		int f=0;
+		int s=1;
+		int t;
+		for(int i=1;i<=12;i++) {
+			System.out.println(f);
+			t=f+s;
+			f=s;
+			s=t;
+		}
+		System.out.println("---------------------------------");
+	}
+
+	private static void q5() {
+		//java program to check Armstrong number between two 
+		//integer 50,500;
+	
+		int number=500;
+		int rem=0;
+		int arm = 0;
+		while(number>=1) {
+			rem=number%10;
+			arm=arm+(rem*rem*rem);
+			number=number/10;	
+		}System.out.println("500 arm number : "+arm);
+		int number1=50;
+		int rem1=0;
+		int arm1 = 0;
+		while(number1>=1) {
+			rem1=number1%10;
+			arm1=arm1+(rem1*rem1);
+			number1=number1/10;	
+		}System.out.println("50 arm number : "+arm1);
+		System.out.println("------------------------------");
+	}
+
+	private static void q4() {
+		// ATM program;
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter your number ");
+		System.out.println("1.WithDraw the money");
+		System.out.println("2.Deposite the money");
+		System.out.println("3.Check the balance");
+		System.out.println("4.Exit");
+		int opt=sc.nextInt();
+		switch (opt) {
+		case 1:{
+			System.out.println("please take your money");
+		}break;
+		case 2:{
+			System.out.println("please inset your money");
+		}break;
+		case 3:{
+			System.out.println("your balance is 100 ");
+		}break;
+		case 4:{
+			System.out.println("exiting......");
+		}break;
+		}
+		System.out.println("------------------------------------");
+	}
+
+	private static void q3() {
+		//
+		
+		int mynumber;// declaration 
+		mynumber =5;//initialization;
+		int anotherNumber=10; //declaration;
+		System.out.println(mynumber);
+		System.out.println(anotherNumber);
+		System.out.println("---------------------------");
+	}
+
+	private static void q2() {
+		// write a program to print the below output;
+		for(int i=5;i>=1;i--) {
+			for(int j=5;j>=i;j--) {
+				System.out.print(j+" ");
+			}System.out.println();
+		}
+		System.out.println("----------------------------");
+	}
+
+	private static void q1() {
+		//write a java program to print the below output;
+		for(int i=1;i<=5;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print(i+" ");
+			}System.out.println();
+		}
+		System.out.println("-------------------------------");
+	}
+
+}
+
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+-------------------------------
+5 
+5 4 
+5 4 3 
+5 4 3 2 
+5 4 3 2 1 
+----------------------------
+5
+10
+---------------------------
+Enter your number 
+1.WithDraw the money
+2.Deposite the money
+3.Check the balance
+4.Exit
+1
+please take your money
+------------------------------------
+500 arm number : 125
+50 arm number : 25
+------------------------------
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+---------------------------------
+enter your number :
+5
+number is odd 5
+------------------------------------
+
