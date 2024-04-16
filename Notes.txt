@@ -1481,3 +1481,147 @@ cat is meowing
 13.04.2024;
 ----------
 
+
+
+
+=========================================================================
+16.04.2024;
+-----------
+public, protected, prinvate
+abstract class B{
+
+abstract void m1();
+}
+class A extends B{
+
+
+}
+
+Absreaction:
+-----------
+    the feature of abstraction is restricition or hiding the internal implementation in java and providing the set of is called abstraction 
+
+    We can acheive the abstraction by using the encapsulation property and using of abstraction class by restriction the poperty of the os access modifier also we can perform hiding the implementation.
+using os the Abstract classes and interface we can achive the partial or 100% Abstraction 
+
+Abstract classes:
+----------------
+    the classes which are created with the keyword of abstract then the class declared as abstract inside the abstract class we can create abstract methods and non-abstract methods using the abstract class we can chieve the partial Abstraction because in abstract cass we non-abstract methods and also constructor concepts are allowed in sbstract classes
+
+restriction of abstract classes:
+--------------------------------
+the classes which contains single abstract mehod then class should be declared as abstract we can have realtionship between the abstract class and cancreate class by using the key here mutiple inhertinace are not allowed in abstract classes
+static, final these combination keyword are not allowed in abstract method 
+
+Syntax:
+-------
+abstract class Sample{
+
+abstract in a=100;----//abstract keyword not allowed in variable;
+
+public abstract m1();
+
+public static void m2(){
+
+sysout("m2 method");
+}
+public void m3(){
+
+sysout("m3 method");
+}
+}
+
+class test extends Sample{
+
+public void m1(){
+
+sysou("child m1 method");
+}
+
+}
+
+
+eg;
+
+Abstract class CalculateArea {
+
+public abstract double area();
+
+}
+
+class Square extends CalculateArea{
+
+double length;
+
+doubble width;
+
+public Square(double lenth,double length){
+
+}
+
+public double area(){
+
+    return width*width;
+}
+
+}
+class Rectangle extends CalculateArea{
+
+double length;
+
+double width;
+
+public Rectangle(double length,double length){
+
+this.length=length;
+
+this.width=width;
+}
+
+public double area(){------------over rider method;
+
+    return width*length;
+}
+public double perimeter(){
+return 2*(length+width);
+}
+}
+class Test {
+public static void main(String[] args){
+
+Rectangle r=new Rectangle(10,5);
+Square s=new Square(2);
+sysout(r.area());
+sysout(s.area());
+
+CalculateArea area=new Reactangle(4,2);
+calculateArea area2=new Square(4);
+syosut(area.area());
+sysout(area2.area());
+}
+
+}
+o/p:
+----
+50
+4
+8
+16
+
+one abstract class can extends another single abstract class only using the extends.
+
+Interfase:
+----------
+using the interfase we can acheive 100% implementation all the methods created inside the interfase are abstract method
+even user not defind keyword of abstract inside the method will be cons all the create the interface are statuc final
+
+we not having the coincept of constructor in interface;
+ 
+===============================================================
+18.04.2024;
+----------
+
+
+
+
+
