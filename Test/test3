@@ -1,0 +1,199 @@
+                                  PART - A (8*5=40)
+1.Difference between OutOfMemorry error and StackOverFlow error with example programs and explain whether we can handle it or with a program.
+2. Find the unique values between two arrays.
+3. Write a program to interchange two String valuse(user-defined) without using the temporary variable.
+4.Define Class and type of classes for each with a program.
+5.Write reverse star pramid program.
+6.Write a program which contain local, static and instance variable and create the object which is default and parameterized object and call retrieve the values 
+7.Can errors be solves? Explain with an example. How errors differ from exceptions.
+8.Write a java program by getting ine student mark from run time and calculate totle, avarage, grade and result (Each suject tot as 100 mark and 5 subjects), then it want to ask for continuing the process from user.
+ One hour test. The test started at 6.33 PM. Write it take a Screenshort and canvert ot onto pdf and semt to the email which I will provide at the end of the session 
+-------------------------------------------------------------------------------------------------------
+1)
+public static void main(String[] args) {
+		/*
+		 * Difference between OutOfMemorry error and StackOverFlow error with example
+		 * programs and explain whether we can handle it or with a program.
+		 */
+		outofmemory(); 
+		stackoverflow();
+	}
+
+	private static void stackoverflow() {
+		// TODO Auto-generated method stub
+		 methodA(1);
+    }
+
+    public static void methodA(int depth) {
+    	 System.out.println("Depth: " + depth);
+        if (depth < 10000) {
+            methodA(depth + 1);
+        }
+    }
+	private static void outofmemory() {
+		// TODO Auto-generated method stub
+		int[] array = new int[Integer.MAX_VALUE];
+		System.out.println(array);
+	}
+--------------------------------------------------------
+2)
+public static void main(String[] args) {
+		int [] a= {20,4,58,4,7,1,5};
+		int [] b= {20,8,5,75,2,7,8};
+		for(int i=0;i<a.length;i++) {
+			int n=a[i];
+			for(int j=0;j<b.length;j++) {
+				if(n==b[j]) {
+					System.out.println(b[j]);
+				}
+			}
+		}
+	}
+----------------------------------------------------------
+3)
+public class StringInterchange {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String string1 = scanner.nextLine();
+
+        System.out.print("Enter the second string: ");
+        String string2 = scanner.nextLine();
+
+        // Convert strings to mutable StringBuilder objects
+        StringBuilder sb1 = new StringBuilder(string1);
+        StringBuilder sb2 = new StringBuilder(string2);
+
+        // Perform interchange without using a temporary variable
+        sb1.append(sb2);
+        sb2 = new StringBuilder(sb1.substring(0, sb1.length() - sb2.length()));
+        sb1 = new StringBuilder(sb1.substring(sb2.length()));
+
+        System.out.println("After interchange:");
+        System.out.println("First string: " + sb1);
+        System.out.println("Second string: " + sb2);
+    }
+---------------------------------------------------------------
+4)
+public class person {
+
+String name;
+int age;
+ person(String name ,int age){
+	 this.name=name;
+	 this.age=age;
+	 
+ }
+ void display() {
+	 System.out.println("name "+name);
+	 System.out.println("age "+age) ;
+ }
+public static void main(String [] args) {
+	person p=new person("yuvan",22);
+	p.display();
+}
+--------------------------------------------------------------
+5)
+public static void main(String[] args) {
+		
+		for(int i=5;i>=1;i--) {
+			for(int j=1;j<=6-i;j++) {
+				System.out.print(" ");
+			}
+			for(int j=1;j<=i;j++){
+				System.out.print(" "+"*");
+			}
+			System.out.println();
+		}
+	}
+-----------------------------------------------------------------
+6)
+public class variable {
+	 // Instance variable or globale variable;
+	int a;
+	
+	// Static variable;
+	static int b;
+	
+	variable(int a){
+		this.a=a;
+	
+	}
+void displayInstatnceVar() {
+		System.out.println("instance Variable :"+a);
+	}
+static void displaystaticvar() {
+	System.out.println("static variable: "+b);
+}
+	public static void main(String[] args) {
+		// Local varibale;
+		int c=30;
+		
+		variable pobj=new variable(10);
+		variable pobj2=new variable(25);
+		
+		b=30;
+		System.out.println("local variable "+c);
+		pobj.displayInstatnceVar();
+		pobj.displaystaticvar();
+		pobj2.displayInstatnceVar();
+		pobj2.displaystaticvar();
+	}
+	
+--------------------------------------------------------------------
+7)
+public static void main(String[] args) {
+		
+		String str=null;
+		//System.out.println(str.length());
+		String str2="hello";
+		System.out.println(str2.length());
+	}
+----------------------------------------------------------------------
+8)
+public static void main(String[] args) {
+	
+		  Scanner scanner = new Scanner(System.in);
+       char choice;
+		       do {
+           // Get marks for each subject
+	            System.out.println("Enter marks for 5 subjects (out of 100):");
+            for (int i = 0; i < 5; i++) {
+	              System.out.print("Subject " + (i + 1) + ": ");
+
+	            // Calculate total
+	            int total = 0;
+	            for (int mark : marks) {
+	               total += mark;
+		            }
+	            // Calculate average
+		            double average = total / 5.0;
+		            // Calculate grade
+		            char grade;
+	           if (average >= 90) {
+		                grade = 'A';
+	            } else if (average >= 80) {
+	                grade = 'B';
+		           } else if (average >= 70) {
+		               grade = 'C';
+	            } else if (average >= 60) {
+	                grade = 'D';
+	            } else {
+		                grade = 'F';
+	            }
+
+	            // Determine result
+
+	           // Display results
+		           System.out.println("Total marks: " + total);
+	            System.out.println("Average marks: " + average);
+	 	            System.out.println("Result: " + result);
+		            // Ask if the user wants to continue
+	            choice = scanner.next().charAt(0);
+	        } while (choice == 'Y' || choice == 'y');
+
+		        System.out.println("Program ended.");
+		        scanner.close();
+		    }
+----------------------------------------------------------------------------------------
