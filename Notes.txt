@@ -1612,7 +1612,7 @@ one abstract class can extends another single abstract class only using the exte
 
 Interfase:
 ----------
-using the interfase we can acheive 100% implementation all the methods created inside the interfase are abstract method
+using the interface we can acheive 100% implementation all the methods created inside the interfase are abstract method
 even user not defind keyword of abstract inside the method will be cons all the create the interface are statuc final
 
 we not having the coincept of constructor in interface;
@@ -1620,6 +1620,150 @@ we not having the coincept of constructor in interface;
 ===============================================================
 18.04.2024;
 ----------
+=============================================================
+23.04.2024;
+----------
+    we can achive the polymorphism features by use of method overriding and method overloading
+
+    method over loading:
+    --------------------
+        we can method over loading by creating the class with mulitple method with the same name but different in paramenter type and size (number of argument  in method parameter)
+here name of the method and parameter are validated by the complier at the complie time 
+eg:
+---
+class calculator
+{
+
+int add(int a, int b){
+
+return a+b;
+}
+double add(int a, int b, int c){
+
+return(double)(a+b+c);
+}
+long add(int a, int b,long c){
+
+return a+b+c;
+}
+int add (int a,int b,int c){
+
+return a+b+c+d;
+}
+
+}
+
+o/p;
+---
+5
+---------------------------------------------------
+
+eg:2
+---
+class sec{
+public void printobj(Object o){
+System.out.println("Object class");
+
+}
+public void printobj(String o){
+System.out.println("String class");
+
+}
+public static void main(String []args){
+
+sec o=new sec();
+o.printobj(null);---c.e(both string and second are the child so both have
+
+}
+}
+o/p
+---
+string class
+------------------------------------------------------------
+class sec{
+public void printobj(Object o){
+System.out.println("Object class");
+
+}
+public void printobj(String o){
+System.out.println("String class");
+
+
+}
+public void printobj(sec o){
+System.out.println("Secound class");
+}
+public static void main(String []args){
+
+sec o=new sec();
+o.printobj(null);---c.e(both string and second are the child so both have
+}
+}
+===========================================
+Method Overriding:
+------------------
+    it allows a sub class to perfrom re impliment of the parent class method here name of the method and paramenter of the method also return extent
+
+class animal{
+
+public void makesound(){
+}
+
+Class Animal extends A{
+void make sound(){
+
+System.out.println("Differnt sounds");
+}
+
+
+}
+abstract class B extends Animal{
+
+abstract void makeSound();
+}
+class cat extends Animal{
+public void makesound(int a){
+System.out.println("meow");
+
+}
+public void makeSound(){
+
+System.out.println("meow");
+}
+
+}
+
+}
+class Dog extends animal
+{
+protected void makesound(){
+
+System.out.println("bark");
+}
+
+}
+class Human extends Animal{
+ final void makesound(){
+System.out.println("shout");
+
+}
+
+}
+public class Test{
+
+
+}
+restriction of over riding:
+*)return type should be same
+*)we can perform over riding between parent non final method to final method
+*_) static to join static not allowed
+*)non-static to static not allowes 
+*)static to static not over riding is called method hiding
+*)absteact to non abstect allowed 
+*)non abstrect to abstract allowed
+*) abstrect to abstract allowed
+*) we can increase the scope of the acess modifer for over ridding method or same but decrease the scop not allowed
+
 
 
 
