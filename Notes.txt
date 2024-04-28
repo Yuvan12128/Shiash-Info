@@ -1774,6 +1774,231 @@ restriction of over riding:
 *) abstrect to abstract allowed
 *) we can increase the scope of the acess modifer for over ridding method or same but decrease the scop not allowed
 
+=================================================================================================================================
+25.04.2024;
+-----------
+Collection is a framework architecture to store and manuplate the group of object 
+    we can perform opreations in the data like inserting, deleting, sorting, updation a group of interfaces and classess object which has been stored in a single entity is called collection 
+
+    collection is an interface which os present in java.util package
+    collection is dynamicin size we can increase or decrese the sizw of the cokkection object
+    colletion allows inly non primitive data typein java 
+    collection allowes to store the heterogeneous data type values
+
+    Hirerarcy of collection 
+    -----------------------
+                Interable(I)
+                    |
+                collection(I)
+                    |
+    --------------------------------------------
+    |                                           |
+List(I)                                       Set(i)
+    |                                           |
+    |-ArrayList(c)                              |-HashSet
+    |-LinkedList(c)                             |-LinkedHashSet(c)
+                                                | -SortedSet(I)
+                                                        |-TreeSet(c)
+                                                        
+List 
+----
+duplicates are allowed
+null values are allowed
+insertion oder
+
+ArrayList(c)
+------------
+ArrayList is the child of the List Interface
+
+syntax for create and arraylist object:
+---------------------------------------
+import java.util.ArrayList;
+class example {
+
+public static void main(String [] args){
+ArrayList al=new ArrayList();
+ArrayList al=new ArrayList(10);
+al.add(10);
+al.add("String");
+al.add('c');
+al.add(10.0);
+System.out.println(al);
+}
+
+}
+o/p;
+----
+[10,String,c,10.0,c]
+
+to find the sizw of the collection:?
+int size()
+this method will retrive the size of the list 
+
+
+to add a value in arrayList;
+----------------------------
+public boolean add (object 0)
+
+to insert the value in collection 
+-----------------------------------------------------
+import java.util.ArrayList;
+class example {
+
+public static void main(String [] args){
+ArrayList al=new ArrayList();
+ArrayList al=new ArrayList(10);
+al.add(10);
+al.add("String");
+al.add('c');
+al.add(10.0);
+System.out.println(al.size());
+}
+
+}
+
+o/p;
+----
+5
+------------------------------------------------------
+
+To add all element one collection child object to an another collection child object 
+----------------------------------------------------------
+public boolean addAll(collection  c)
+eg;
+---
+import java.util.ArrayList;
+class example {
+
+public static void main(String [] args){
+ArrayList al=new ArrayList();
+ArrayList al=new ArrayList(10);
+al.add(10);
+al.add("String");
+al.add('c');
+al.add(10.0);
+System.out.println(al.size());
+ArrayList al2=new ArrayList();
+
+al2.add(9000);
+al2.add(222);
+al2.addAll(al);
+System.out.println(al2);
+ArrayList al3=new ArrayList();
+
+al2.add(9);
+al2.add("d");
+al2.addA(al3);
+System.out.println(al);
+}
+
+}
+
+o/p;
+----
+[9000, 222, 10, String, c, true, 10.0]
+-----------------------------------------------------------------
+
+to remove all the element in the cololection object;
+=--------------------------------------------------
+ void clear();
+
+
+eg;
+--
+class example{
+public static void main(String [] args){
+al.add(10);
+al.add("String");
+al.add('c');
+al.add(10.0);
+system.out.println(al);
+
+}
+
+
+}
+o/p;
+---
+[]
+
+
+to remove all the element from collection to another collection metched values;
+---------------------------------------------------------------------------------
+boolean remmoveAll(coloection c)
+
+mport java.util.ArrayList;
+class example {
+
+public static void main(String [] args){
+ArrayList al=new ArrayList();
+ArrayList al=new ArrayList(10);
+al.add(10);
+al.add("String");
+al.add('c');
+al.add(10.0);
+System.out.println(al.size());
+ArrayList al2=new ArrayList();
+
+al2.add(9000);
+al2.add(222);
+al.removeAll(al2);
+System.out.println(al);
+
+}
+
+}
+o/p;
+---
+[]
+-------------------------------------------------------------
+check the given element present in the object or not
+ 
+
+import java.util.ArrayList;
+class example {
+
+public static void main(String [] args){
+ArrayList al=new ArrayList();
+ArrayList al=new ArrayList(10);
+al.add(10);
+al.add("String");
+al.add('c');
+al.add(10.0);
+System.out.println(al.contains(10));
+
+o/p;
+---
+true;
+
+======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
