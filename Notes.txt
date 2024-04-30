@@ -1971,24 +1971,212 @@ o/p;
 true;
 
 ======================================================================
+30.05.2024;
+----------
+E get(int index)
+it return the element from the specific position
+
+ArrayList l=new ArrayList();
+l.add(1);
+l.add("abc");
+l.add(2);
+
+sysout(l.get(2));
+
+o/p;
+----
+2
+------------------------------------------------------
+object [] toArrau()
+import java.util.*;
+class demo{
+public static void main(String[]args){
+ArrayList l=new ArrayList();
+l.add(1);
+l.add("abc");
+l.add("selva");
+l.add("45");
+
+//System.out.println(l);
+
+Object[] obj=l.toArray();
+for(Object obj2:obj){
+System.out.println(obj2);
+}
+ArrayList<Integer> l2=new ArrayList<Integer>();
+l2.add(1);
+l2.add(12);
+l2.add(13);
+l2.add(null);
+Object[] obj3=l2.toArray();
+for(Object obj4:obj3){
+System.out.println(obj4);
+}
+Iterator itr=l.iterator();
+
+while(itr.hasNext()){
+System.out.println(itr.next());
+}
+Iterator<Integer> itr2=l2.iterator();
+while(itr2.hasNext()){
+System.out.println(itr2.next());
+}
+}
+}
+------------------------------------------------------------
+set(int index,Element e)
+
+this method is used in array list using the method we can set the new value for the sepecfif index of the list object of the list 
+ 
+ArrayList l=new ArrayList();
+l.add(1);
+l.add("abc");
+l.add(2);
+
+sysout(l.set(1,"harish"));
+
+o/p;
+----
+[1,harish,2]
+--------------------------------------------------------
+Collection contains method used to sort the list 
+
+static void sort(List l);
+
+ArrayList<String> l=new ArrayList<String>();
+l.add("c");
+l.add("a");
+l.add("b");
+l.add("d");
+
+sysout(l.set(1,"harish"));
+
+Collections.sort(1);
+
+for(String ss:l){
+sysout(ss);
+}
+
+o/p
+--
+a
+b
+c
+d
+
+difference between the arrayList and linked list
+
+ArrayList is best to add and retive the data from the list
+LiskedList os best to perform manipulation of data from the list
+
+ArrayList<String>l=new ArrayList<>();
+l.add(1);
+l.add(2);
+l.add(3);
+l.add(4);
+for(String ss:l){
+sysout(ss);
+
+}
+o/p;
+---
+1
+2
+3
+4
+----------------------------------------------------
+LinkedList<Interger> l1=new ListedList<Integer>();
+l1.add(12);
+l1.add(32);
+l1.add(10);
+l1.set(1,222);
+l1.remove(0);
+sysoout(l1);
+
+o/p;
+---
+[222,10]
+
+Set:
+---
+    set not allows the duplicate values
+based on the child classes of the set following differnt oder of storing the values
+single null values are allwed
+
+HashSet
+
+    duplicate not allowed 
+random order has been followed to store the data 
+
+HashSet hs=new HashSet();
+hs.add(11);
+hs.add(12);
+hs.add(11);
+hs.add(11);
+
+sysout(hs);
+
+o/p;
+---
+[11,13]
+
+HashSet hs=new HashSet();
+hs.add(11);
+hs.add(12);
+hs.add(13);
+hs.add(14);
+
+sysout(hs);
+
+o/p;
+---
+[12,14,13,11]
+
+HashSet hs=new HashSet();
+hs.add(null);
+hs.add(12);
+hs.add(13);
 
 
+sysout(hs);
+
+o/p;
+---
+[null,12,13]
+
+LinkedHashSet:
+--------------
+it also not allows the duplicate value
+insertion order is preserved
+
+Set<Integer> hs=new LinkedHasHashSet<Integer>();
+hs.add(33);
+hs.add(11);
+hs.add(13);
+hs.add(11);
+
+sysout(hs);
+o/p
+---
+[33,1,13]
 
 
+TreeSet:
+-------
+duplicates are not allowed
+null values are not allowed
 
+SortedSet<Integer> ss=new TreeSet<Integer>();
+ss.add(22);
+ss.add(22);
+ss.add(2);
+ss.add(21);
 
+sysout(ss);
 
-
-
-
-
-
-
-
-
-
-
-
+o/p;
+---
+[2,22,21]
 
 
 
