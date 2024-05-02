@@ -2178,6 +2178,216 @@ o/p;
 ---
 [2,22,21]
 
+=================================================================================================
+02.05.2024;
+----------
+Map
+---
+If you want to store the object based on the key value pairs we can use map
+hew keys duplicates are not allowed 
+values duplicate are alliwed
+set of pair of key and values are called as entry
+
+map is used to perform search, update and delete on the basis of key 
+
+Hierarchy in Java Map
+
+
+                Map
+                 |
+-----------------------------------------
+|                                       |
+HashMap(c)                          SortedMap(I)    
+|                                       |
+LinkedHashMap(c)                    TreeMap(c)
+
+HashMap;
+--------
+HashMap it is child of Map
+it follows the random order 
+
+LinkedHashMap;
+--------------
+HashMap it is child of Map
+it follows the insertion order 
+
+TreeMap;
+--------
+LinkedHashMap it is child of sortedMap
+it follows the asending order
+
+Common methods we are using in map
+
+put(Object key, Object value)
+it is used to add the entry values in map object
+
+eg:
+--
+import java.util.*;
+class t1{
+public static void main(String [] args){
+HashMap<Integer,String> map=new HashMap<Integer,String>();
+map.put(1,"harry");
+map.put(2,"shankar");
+map.put(3,"dhoni");
+map.put(4,"yuvan");
+
+
+Set set=map.entrySet();
+
+Iterator itr=set.iterator();
+
+while(itr.hasNext()){
+Map.Entry entry=(Map.Entry)itr.next();
+
+System.out.println(entry.getKey()+"   "+entry.getValue());
+}
+
+}
+
+}
+eg:2;
+-----
+class t2{
+public static void main(String [] args){
+HashMap<Integer,String> map=new HashMap<Integer,String>();
+map.put(1,"harry");
+map.put(2,"shankar");
+map.put(3,"dhoni");
+map.put(4,"yuvan");
+
+
+for(Map.Entry entry:map.entrySet()){
+
+System.out.println(entry.getKey()+"   "+entry.getValue());
+}
+
+}
+
+
+}
+o/p;
+---
+1   peter
+2   ram
+3   hari
+
+
+Values get(key)
+it retrieves the value of the specific key
+eg;
+---
+class t2{
+public static void main(String [] args){
+HashMap<String,String> map=new HashMap<String,String>();
+map.put("one","harry");
+map.put("two","shankar");
+map.put("three","dhoni");
+
+sysout(map.get("three"));
+
+}
+}
+o/p;
+---
+peter
+
+
+3.remove(key)
+remove the specific entry
+
+eg;
+---
+class t2{
+public static void main(String [] args){
+HashMap<String,String> map=new HashMap<String,String>();
+map.put("one","harry");
+map.put("two","shankar");
+map.put("three","dhoni");
+map.remove("three");
+sysout(map);
+}
+}
+o/p;
+---
+{one=hari,two=ram}
+
+4.containskey(Key)
+
+it will return true or false based on the entry in the map
+
+eg;
+---
+class t2{
+public static void main(String [] args){
+HashMap<String,String> map=new HashMap<String,String>();
+map.put("one","harry");
+map.put("two","shankar");
+map.put("three","dhoni");
+map.put("four","hari");
+sysout(map.containsKey("two"));
+sysout(map);
+}
+}
+
+o/p
+---
+true
+{one=harry,two=shankar,three=dhoni,four=hari}
+
+treeMap;
+--------
+
+public static void main(String [] args){
+TreeMap<String,Integer> map=new TreeMap<String,Integer>();
+map.put("one","1");
+map.put("two","2");
+map.put("three","3");
+map.put("a","4");
+map.put("z","4");
+sysout(map);
+}
+}
+
+o/p
+---
+{a=4,one=1,three=3,two=2,z=4}
+
+Map
+
+create a string 
+remove the punctuation and convert to lowercase
+find the number of frequecies of word 
+
+ag:
+--
+String str="this is the world .this is not belong to humans there is other species are there to live";
+
+class numberOFFrequency{
+public static void main(String[] args){
+String str="this is the world .this is not belong to humans there is other species are there to live";
+
+str=str.replaceAll("[^a-zA-Z]","").tolowerCase();
+//this is the world this is not.....
+
+String [] splitwords=str.split(" ");
+map<String,Ingeter>map=new LinkedHashMap</string,Integer>();
+for(String word:splitwords){
+if(word.isEmpty()){
+continue;
+}
+map.put(word,);
+}
+
+}
+
+}
+
+=============================================================================
+
+
+
+
 
 
 
