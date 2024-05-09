@@ -2384,21 +2384,133 @@ map.put(word,);
 }
 
 =============================================================================
+04.05.2024;
+-----------
 
 
+===================================================================================
+09.05.2024;
+----------
+
+->show databases;
+->use office;
+->desc temp;
+->desc employee;
+->creae table refernceTemp(id int, name varchar(50),dateofbirth date,order_datetime datetime);
+->desc refernceTemp;
+->insert into refernceTemp values(1,'yuvan','2002-06-24','2022-10-03 10:10:40');
+->alter table refernceTemp add column stockordered bool;
+->insert ubto refernceTemp values(2,'vicky',2000-05-23',2022-10-13 09:44:30',true);
+->select * from refernceTemp;
+->
+
+------------------------------------------------
+DATE AND TIME datatype
+
+date:
+used to store the date in the format of 'yyyy-mm-dd'
+
+DATETIME
+
+it is used to store the data and time in format of 'yyyt-mm-dd hh:mm:ss'
+
+BOOLEAN DATA TYPE:
+
+used to store the boolen value either ture,false, null
 
 
+mysql>create table refernceTemp(id int, varchar(50),dataofbirth DATE,order_datetime datetime);
+Query OK, 0 rows affected(0.25 sec)
+
+mysql> desc refernceTemp;
++-----------------------------------------+
+|field  type   null  key  defult   extra
+------------------------------------------
+|id      int(1) yes        NULL
+|name    varchar(5)yes     NULL
+|dateofbirth date  yes     NULL
+|order_datetime datetime yes NULL
+--------------------------------------------
+
+mysql>insert into refernceTemp values(1,'dinesh','1997-12-15','2022-10-13 09:44:30' true);
+
+mysql>select * from refernceTemp;
+---------------------------------------------------
+id   name  dateofbirth  order_datetime  stockored 
+------------------------------------------------
+1  dinesh 1997-12-25 2022-10-03 10:30:40  null
+2  vicky  2000-05-23  2022-10-12 09:44:30 1
+--------------------------------------------------
+
+MySql:
+-----
+sql commands are the instruction proivided to the given databases used to perform specific task like create a table, modify the table update the recods in table,delete 
+update the records on table, delete records, insert the records, insert the records on talbe
+
+Types of SQL Commands:
+---------------------
+ there are five commands there ddl,dml,dcl,tcl,dql
+
+DDL:
+---
+
+    ddl refers data Definition language the opration or task wecan perform on the table level creating a talbe, alter the table,delete the table..ect
+all commands are having the permission to make permanent chages on the databases
+
+CREATE
+ALTER
+DROP
+TRUNCATE
+
+CREATE :
+    if you want to store the record and organise for that we need a table thos table will be create command
+
+create a name of the table with the name of fields(column name) and definition of the field(date type and attributes)
+
+syntac:
+------
+create table TB_Name(column_definition);
+
+column definitions:
+------------------
+
+column definitions:
+ name of column
+ date type of he column
+ external attributes
+
+CONSTRAINS in Mysql:
+-------------------
+primary Key
+foreign key
+check
+unique key
 
 
+create table ofice(id int not null)
 
 
+-->create table emp(emp_id auto_increment primary key,name varchar(20) not null,email varchar(50) unique,gender enum(male',female','other'),dateofbirth date);
 
+-->create table temproary(if int, age int check (age >=10 and age <=70));
+-->create table temp3(id int auto_increment, primary key(id));
 
+-->create talbe temp4(id int, prime key(id),ord_id int auto_increament unique);
 
+ALTER:
+-----
+using the alter command we can perform operation on the table like change the name of the column, add the cloumn remove 
 
+mysql>alter table emp add column location varchar(100);
 
+mysql>alter table emp drop columngender:
 
+mysql>alter table emp modify column location char(10);
+myaql>alter table emp change column location place carchar(50);
+mysql>alter table emp modify column emp_id int;
 
-
+mysql>alter table emp drop primary key;
+mysql>alter table emp drop unique key;
+============================================================
 
 
