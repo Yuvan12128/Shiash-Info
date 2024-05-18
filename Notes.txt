@@ -2512,5 +2512,6 @@ mysql>alter table emp modify column emp_id int;
 mysql>alter table emp drop primary key;
 mysql>alter table emp drop unique key;
 ============================================================
-
+18.05.2024;
+------------
 
