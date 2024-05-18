@@ -2514,4 +2514,229 @@ mysql>alter table emp drop unique key;
 ============================================================
 18.05.2024;
 ------------
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.01 sec)
 
+mysql> create database shiarh;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| shiarh             |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> use shiars;
+ERROR 1049 (42000): Unknown database 'shiars'
+mysql> use shiarh;
+Database changed
+mysql> create table earth;
+ERROR 4028 (HY000): A table must have at least one visible column.
+mysql> create table earth(id int,countries varchar(30),continent varchar(20),area int,population bigint,gdp bigint);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> des earth;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'des earth' at line 1
+mysql> select * from earth;
+Empty set (0.01 sec)
+
+mysql> describe earth;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| id         | int         | YES  |     | NULL    |       |
+| countries  | varchar(30) | YES  |     | NULL    |       |
+| continent  | varchar(20) | YES  |     | NULL    |       |
+| area       | int         | YES  |     | NULL    |       |
+| population | bigint      | YES  |     | NULL    |       |
+| gdp        | bigint      | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> insert into earth(1,'Afghanistan','Asia',652230,25500100,20343000000)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,'Afghanistan','Asia',652230,25500100,20343000000)' at line 1
+mysql> insert into earth values(1,'Afghanistan','Asia',652230,25500100,20343000000);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into earth values(2,'Albania','Europe',28748,2831741,12960000000);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into earth values(3,'Algeria','Africa',2381741,37100000,188681000000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into earth values(4,'Andorra','Europe',468,78115,3712000000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into earth values(5,'Angola','Africa',1246700,20609294,100990000000);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from earth;
++------+-------------+-----------+---------+------------+--------------+
+| id   | countries   | continent | area    | population | gdp          |
++------+-------------+-----------+---------+------------+--------------+
+|    1 | Afghanistan | Asia      |  652230 |   25500100 |  20343000000 |
+|    2 | Albania     | Europe    |   28748 |    2831741 |  12960000000 |
+|    3 | Algeria     | Africa    | 2381741 |   37100000 | 188681000000 |
+|    4 | Andorra     | Europe    |     468 |      78115 |   3712000000 |
+|    5 | Angola      | Africa    | 1246700 |   20609294 | 100990000000 |
++------+-------------+-----------+---------+------------+--------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT population FROM countries WHERE country_name = 'Africa';
+ERROR 1146 (42S02): Table 'shiarh.countries' doesn't exist
+mysql> SELECT population FROM countries WHERE Africa = 'Africa';
+ERROR 1146 (42S02): Table 'shiarh.countries' doesn't exist
+mysql> SELECT population FROM countries WHERE earth = 'Africa';
+ERROR 1146 (42S02): Table 'shiarh.countries' doesn't exist
+mysql> SELECT population FROM countries WHERE continent = 'Africa';
+ERROR 1146 (42S02): Table 'shiarh.countries' doesn't exist
+mysql> SELECT SUM(population) AS total_population
+    -> FROM your_table_name
+    -> WHERE continent = 'Africa';
+ERROR 1146 (42S02): Table 'shiarh.your_table_name' doesn't exist
+mysql> select population 
+    -> from earth
+    -> where continent='Africa';
++------------+
+| population |
++------------+
+|   37100000 |
+|   20609294 |
++------------+
+2 rows in set (0.00 sec)
+
+mysql> select countries,population
+    -> from earth
+    -> where countries in ('albania','angola');
++-----------+------------+
+| countries | population |
++-----------+------------+
+| Albania   |    2831741 |
+| Angola    |   20609294 |
++-----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select countries, area 
+    -> from earth
+    -> where area between 200 and 2500;
++-----------+------+
+| countries | area |
++-----------+------+
+| Andorra   |  468 |
++-----------+------+
+1 row in set (0.00 sec)
+
+mysql> ^C
+mysql> select countries AS name,
+    -> gdp?population AS per_capita_gdp
+    -> from earth
+    -> where population >=200;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?population AS per_capita_gdp
+from earth
+where population >=200' at line 2
+mysql> selete countries,(gdp/population) as per_capita_GDP
+    -> from earth
+    -> where population >=200;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'selete countries,(gdp/population) as per_capita_GDP
+from earth
+where population ' at line 1
+mysql> SELECT countries, (gdp / population) AS per_capita_GDP
+    -> FROM your_table_name
+    -> WHERE population >= 200;
+ERROR 1146 (42S02): Table 'shiarh.your_table_name' doesn't exist
+mysql> SELECT countries, (gdp / population) AS per_capita_GDP
+    -> FROM your_table_name
+    -> WHERE population >= 200;
+ERROR 1146 (42S02): Table 'shiarh.your_table_name' doesn't exist
+mysql> select countries, (gdp/population) AS per_capita_GDP
+    -> from earth
+    -> where population >=200;
++-------------+----------------+
+| countries   | per_capita_GDP |
++-------------+----------------+
+| Afghanistan |       797.7616 |
+| Albania     |      4576.6897 |
+| Algeria     |      5085.7412 |
+| Andorra     |     47519.6825 |
+| Angola      |      4900.2164 |
++-------------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> select countries AS name,
+    -> population
+    -> from earth
+    -> where countries IN ('Albania','Andorra');
++---------+------------+
+| name    | population |
++---------+------------+
+| Albania |    2831741 |
+| Andorra |      78115 |
++---------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select distinct countries from earth order by countries desc;
++-------------+
+| countries   |
++-------------+
+| Angola      |
+| Andorra     |
+| Algeria     |
+| Albania     |
+| Afghanistan |
++-------------+
+5 rows in set (0.00 sec)
+
+mysql> select t1.*,t2.* from table1 t1 inner join table t2 on t1.common_column_column;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table t2 on t1.common_column_column' at line 1
+mysql> select t1.*,t2.* from table1 t1 inner join table2 t2 on t1.common_column =t2.common_column;
+ERROR 1146 (42S02): Table 'shiarh.table1' doesn't exist
+mysql> Alter table earth modify column id int auto_increment primary key;
+Query OK, 5 rows affected (0.08 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> describe earth;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| id         | int         | NO   | PRI | NULL    | auto_increment |
+| countries  | varchar(30) | YES  |     | NULL    |                |
+| continent  | varchar(20) | YES  |     | NULL    |                |
+| area       | int         | YES  |     | NULL    |                |
+| population | bigint      | YES  |     | NULL    |                |
+| gdp        | bigint      | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)
+
+mysql> alter table earth add column date_of_register date;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe earth;
++------------------+-------------+------+-----+---------+----------------+
+| Field            | Type        | Null | Key | Default | Extra          |
++------------------+-------------+------+-----+---------+----------------+
+| id               | int         | NO   | PRI | NULL    | auto_increment |
+| countries        | varchar(30) | YES  |     | NULL    |                |
+| continent        | varchar(20) | YES  |     | NULL    |                |
+| area             | int         | YES  |     | NULL    |                |
+| population       | bigint      | YES  |     | NULL    |                |
+| gdp              | bigint      | YES  |     | NULL    |                |
+| date_of_register | date        | YES  |     | NULL    |                |
++------------------+-------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+================================================================================================================================================
